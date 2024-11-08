@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Programacion_Unidad_2.Models.Carreras>
+@{
+	Layout = "_Layout";
+}
+
+
+<h1>
+	Oferta Académica
+
+</h1>
+
+
+
+<ol class="rectangle-list">
+	@foreach (var car in Model)
+	{
+		<li>
+
+			<a href="~/informacion/@car.Nombre.Replace(" ", "-")"> @car.Plan @car.Nombre</a>
+		</li>
+	}
+</ol>
+
